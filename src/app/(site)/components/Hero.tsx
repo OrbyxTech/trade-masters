@@ -8,7 +8,7 @@ function Hero() {
           We are here for you
         </h1>
 
-        <span className="text-[#000000] text-3xl opacity-50">
+        <span className="text-[#000000] text-4xl opacity-50 tracking-wide">
           Our fund , Your trade
         </span>
 
