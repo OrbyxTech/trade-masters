@@ -1,93 +1,31 @@
-import Image from "next/image"
-import TopNavigation from "./TopNavigation"
-import { Quicksand } from "next/font/google"
-import ContactButton from "./ContactButton"
-
-const quicksand = Quicksand({ weight: "700", subsets: ["latin"] })
+import { Button } from "@/components/ui/button";
 
 function Hero() {
-    return (
-        <div className="w-full relative z-10 h-screen">
-            <Image
-                alt=""
-                width={1920}
-                height={958}
-                src="/hero-image-2.png"
-                className="absolute top-0 left-0 object-center object-cover w-full h-full -z-10"
-            />
+  return (
+    <div className="flex justify-center items-center w-5/6 mx-auto overflow-hidden">
+      <div className="flex flex-col justify-center items-start gap-10 py-2">
+        <h1 className="scroll-m-20 text-7xl font-bold w-4/6">
+          We are here for you
+        </h1>
 
-            <Image
-                alt=""
-                width={920}
-                height={286}
-                src="/ellipse-1.png"
-                className="absolute w-[42rem] -z-10 h-auto top-0 left-1/2 -translate-x-1/2"
-            />
+        <span className="text-[#000000] text-3xl opacity-50">
+          Our fund , Your trade
+        </span>
 
-            <div className="z-10 mb-12">
-                <TopNavigation />
-            </div>
+        <div className="flex gap-10">
+          <Button className="text-white border border-[#E4622E] bg-[#FF521D] rounded-3xl transition-all duration-300 hover:text-[#FF521D] hover:bg-white px-6">
+            contact us
+          </Button>
 
-            <div className="grid grid-cols-[1fr_5rem] min-h-[23rem] w-10/12 mx-auto">
-                <div className="pl-20">
-                    <h2 className={`text-white text-6xl [text-shadow:0_0_15px_white] leading-[3.8rem] mb-7 ${quicksand.className}`}>
-                        We Are Here<br />For You
-                    </h2>
-
-                    <p className={`text-[#02FF67] text-xl inline ${quicksand.className}`}>
-                        Our fund
-                    </p>
-                    &nbsp;
-                    <span className={quicksand.className}>,</span>
-                    &nbsp;
-                    <p className={`text-[#F00090] text-xl inline ${quicksand.className}`}>
-                        Your Trade
-                    </p>
-
-                    <div className="mt-12"></div>
-                    <ContactButton />
-                </div>
-
-                <div className="flex flex-col gap-y-3">
-                    <Image
-                        alt=""
-                        width={50}
-                        height={51}
-                        src="/fb.png"
-                        className="w-7 h-7 object-center object-cover"
-                    />
-                    <Image
-                        alt=""
-                        width={50}
-                        height={51}
-                        src="/ig.png"
-                        className="w-7 h-7 object-center object-cover"
-                    />
-                    <Image
-                        alt=""
-                        width={50}
-                        height={51}
-                        src="/be.png"
-                        className="w-7 h-7 object-center object-cover"
-                    />
-                    <Image
-                        alt=""
-                        width={50}
-                        height={51}
-                        src="/tw.png"
-                        className="w-7 h-7 object-center object-cover"
-                    />
-                    <Image
-                        alt=""
-                        width={50}
-                        height={51}
-                        src="/pi.png"
-                        className="w-7 h-7 object-center object-cover"
-                    />
-                </div>
-            </div>
+          <Button className="text-[#E4622E] bg-white rounded-3xl transition-all duration-300 hover:text-white px-6">
+            Learn more
+          </Button>
         </div>
-    )
+      </div>
+
+      <img src="/images/chain.svg" alt="chain" />
+    </div>
+  );
 }
 
-export default Hero
+export default Hero;
