@@ -1,3 +1,4 @@
+import Challenges from "./Challenges";
 import Features from "./Features";
 import ProfitShare from "./ProfitShare";
 import Trading from "./Trading";
@@ -10,6 +11,7 @@ export default function Main() {
       <UpTo1Million />
       <ProfitShare />
       <Trading />
+      <Challenges />
     </div>
   );
 }
