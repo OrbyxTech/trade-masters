@@ -4,21 +4,19 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 
 const formSchema = z.object({
-  username: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
+  email: z.string().min(2, {
+    message: "",
   }),
 });
 
@@ -26,7 +24,7 @@ export default function SignUpBox() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      username: "",
+      email: "",
     },
   });
 
@@ -38,7 +36,7 @@ export default function SignUpBox() {
   }
 
   return (
-    <div className="flex justify-center items-center gap-28 mt-44">
+    <div className="flex justify-center items-center gap-28 mt-56">
       <div className="flex flex-col gap-2">
         <h2 className="text-[#160637] font-semibold text-3xl">
           Your journey of success :
@@ -79,7 +77,7 @@ export default function SignUpBox() {
 
             <FormField
               control={form.control}
-              name="username"
+              name="email"
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
