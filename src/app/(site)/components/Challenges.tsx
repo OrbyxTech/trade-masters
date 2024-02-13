@@ -7,6 +7,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import PropiyChallengesCard from "./propiyChallengesCard";
+import SignUpBox from "./SignUpBox";
 
 const Rows1 = [
   {
@@ -378,6 +379,8 @@ export default function Challenges() {
             img="/images/main/propiyChallenge/tradePhoto3.svg"
           />
         </div>
+
+        <SignUpBox />
       </div>
     </>
   );
