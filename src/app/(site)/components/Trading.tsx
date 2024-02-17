@@ -21,7 +21,7 @@ export default function Trading() {
         contractors, or any connected entities. You are solely responsible for
         assessing the benefits and risks associated with the use of any
         information or other content on the Website. All investments include
-        substantial risk, and an individual's investment decisions are solely
+        substantial risk, and an individual&apos;s investment decisions are solely
         his/her obligation. All information on the Website is provided “as is”,
         with no guarantee of completeness, accuracy, timeliness, or of the
         results obtained from the use of this information, and without warranty
