@@ -6,7 +6,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import PropiyChallengesCard from "./propiyChallengesCard";
+import PropiyChallengesCard from "./PropiyChallengesCard";
 import SignUpBox from "./SignUpBox";
 
 const Rows1 = [
