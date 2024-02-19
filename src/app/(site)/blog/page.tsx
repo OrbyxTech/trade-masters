@@ -1,8 +1,5 @@
-
 function page() {
-    return (
-        <div>blog page</div>
-    )
+  return <div className="text-black">blog page</div>;
 }
 
-export default page
+export default page;

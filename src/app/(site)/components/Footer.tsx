@@ -1,39 +1,63 @@
-
-import { Quicksand } from "next/font/google"
-import Image from "next/image"
-
-const quicksand = Quicksand({ subsets: ["latin"], weight: "500" })
-const quicksand700 = Quicksand({ subsets: ["latin"], weight: "700" })
+import Image from "next/image";
 
 function Footer() {
-    return (
-        <footer className="w-full p-1">
+  return (
+    <footer
+      className="w-full h-[85vh] flex justify-center items-center mt-32"
+      style={{
+        background: 'url("/images/footer/footerBg.svg")',
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <div className="flex flex-col justify-center items-center w-full h-full p-20 pt-48">
+        <div className="w-full flex justify-center items-center gap-48">
+          <Image
+            src="/images/ProPiy..svg"
+            alt="propiy logo"
+            width={350}
+            height={350}
+          />
 
-            <p className={`${quicksand700.className} text-2xl text-white capitalize text-center mb-5`}>
-                <Image
-                    alt=""
-                    width={90}
-                    height={90}
-                    src="/ProPiy..png"
-                    className="w-20 h-auto inline"
-                /> prop trading
-            </p>
-
-            <div className="w-full p-3 relative">
-
-                <div className="absolute top-0 left-0 w-7 aspect-square border-t-2 border-l-2 border-white/90 rounded-tl"></div>
-                <div className="absolute bottom-0 left-0 w-7 aspect-square border-b-2 border-l-2 border-white/90 rounded-bl"></div>
-                <div className="absolute top-0 right-0 w-7 aspect-square border-r-2 border-t-2 border-white/90 rounded-tr"></div>
-                <div className="absolute bottom-0 right-0 w-7 aspect-square border-r-2 border-b-2 border-white/90 rounded-br"></div>
-
-                <div className="w-full rounded-xl py-14 px-20 bg-gradient-to-r from-[#02FF6733] to-[#F0009033]">
-                    <p className={`${quicksand.className} text-sm text-white`}>
-                        The information on the Website is provided solely for analysis purposes only and should not be construed as financial, investment, tax, or other advice. Nothing on the Website or in our Services represents a solicitation, advice, endorsement, or offer to purchase or sell stocks or other financial instruments by Propiy, its agents, employees, contractors, or any connected entities. You are solely responsible for assessing the benefits and risks associated with the use of any information or other content on the Website. All investments include substantial risk, and an individual&apos;s investment decisions are solely his/her obligation. All information on the Website is provided “as is”, with no guarantee of completeness, accuracy, timeliness, or of the results obtained from the use of this information, and without warranty of any kind, express or implied. Propiy, or its partners, employees, or agents, shall in no way be responsible to you or anyone else for any decision made or action taken in reliance on the information on the Website, or for any consequential, special, or similar damages, even if warned of the potential of such damages. Purchases should not be regarded as deposits. All program charges are utilized for working expenses including, however not restricted to, staff, innovation, and other business-related costs.
-                    </p>
-                </div>
+          <div className="flex items-start gap-32">
+            <div>
+              <h2 className="text-white font-semibold text-xl">Company</h2>
+              <ul className="flex flex-col gap-2 py-4">
+                <li className="font-thin">About us</li>
+                <li className="font-thin">Careers</li>
+                <li className="font-thin">Contact us</li>
+                <li className="font-thin">Lift Media</li>
+              </ul>
             </div>
-        </footer>
-    )
+
+            <div>
+              <h2 className="text-white font-semibold text-xl">Information</h2>
+              <ul className="flex flex-col gap-2 py-4">
+                <li className="font-thin">FAQ</li>
+                <li className="font-thin">Blog</li>
+                <li className="font-thin">Support</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex items-center justify-between w-full mt-10">
+          <div className="flex justify-center items-center w-full gap-6">
+            <span className="font-thin text-white">Terms</span>
+            <span className="font-thin text-white">Privacy</span>
+            <span className="font-thin text-white">Cookies</span>
+          </div>
+
+          <div className="flex gap-2 justify-end">
+            <img src="/images/footer/Linkedin.svg" alt="linkedin icon" />
+            <img src="/images/footer/Facebook.svg" alt="instagram icon" />
+            <img src="/images/footer/Twitter.svg" alt="X icon" />
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;

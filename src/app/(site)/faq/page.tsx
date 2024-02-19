@@ -1,8 +1,5 @@
-
 function page() {
-    return (
-        <div>faq</div>
-    )
+  return <div className="text-black">faq</div>;
 }
 
-export default page
+export default page;
