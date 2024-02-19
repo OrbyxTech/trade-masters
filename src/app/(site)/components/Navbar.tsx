@@ -32,9 +32,14 @@ export default function Navbar() {
           FAQ
         </Link>
 
-        <Button className="text-[#E4622E] border border-[#E4622E] bg-white rounded-3xl transition-all duration-300 hover:text-white px-6">
-          sign in / log in
-        </Button>
+        <Link href="/login">
+          <Button
+            className="text-[#E4622E] border border-[#E4622E] bg-white rounded-3xl
+          transition-all duration-300 hover:text-white px-6"
+          >
+            sign in / log in
+          </Button>
+        </Link>
       </ul>
     </nav>
   );
